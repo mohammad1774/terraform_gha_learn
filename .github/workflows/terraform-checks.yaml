@@ -1,0 +1,33 @@
+name: Terraform Checks
+
+on:
+    push: {}
+    workflow_dispatch: {}
+
+permissions:
+    contents: read
+
+jobs:
+    checks:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+        
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup Terraform
+              uses: hashicorp/setup-terraform@v3
+              with: 
+                terraform_wrapper: false
+            
+            - name: Terraform fmt (check)
+              run: terraform -chdir=infra/envs/dev fmt -check -recursive
+
+            - name: Terraform init
+              run: terraform -chdir=infra/envs/dev init -input=false
+
+            - name: Terraform validate
+              run: terraform -chdir=infra/envs/dev validate
+              
