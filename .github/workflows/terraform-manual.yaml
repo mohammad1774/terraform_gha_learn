@@ -42,7 +42,7 @@ jobs:
 
             - name: Terraform plan
               if: inputs.action == 'plan'
-              run: terraform -chdir=${{ inputs.tf_dir }}
+              run: terraform -chdir=${{ inputs.tf_dir }} plan -no-color
 
             - name: Terraform Apply
               if: inputs.action == 'apply'
