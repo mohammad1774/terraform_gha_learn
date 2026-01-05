@@ -10,12 +10,12 @@ variable "resource_group_name" {
 }
 
 variable "storage_account_name" {
-    type = string
-    description = "Globally unique storage account name (3-24 lowercase letters/numbers)"
+  type        = string
+  description = "Globally unique storage account name (3-24 lowercase letters/numbers)"
 }
 
 variable "blob_container_name" {
-    type = string 
-    description = "Blob Container name."
-    default = "appdata"
+  type        = string
+  description = "Blob Container name."
+  default     = "appdata"
 }

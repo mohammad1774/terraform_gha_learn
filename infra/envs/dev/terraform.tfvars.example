@@ -1,0 +1,4 @@
+resource_group_name  = "rg-tf-dev"
+location             = "canadaeast"
+storage_account_name = "st<unique-lowercase-name>"
+blob_container_name  = "appdata"
