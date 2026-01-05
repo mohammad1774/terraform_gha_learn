@@ -8,7 +8,7 @@ on:
                 required: true
                 default: "infra/envs/dev"
             action:
-                description: "plan or apply"
+                description: "plan or apply or destroy"
                 required: true 
                 default: "plan"
 
