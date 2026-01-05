@@ -1,0 +1,9 @@
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+crash.log
+crash.*.log
+
+# For now, ignore tfvars (we’ll commit an example instead)
+*.tfvars
+*.tfvars.json
