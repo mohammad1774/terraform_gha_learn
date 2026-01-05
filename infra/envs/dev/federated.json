@@ -1,0 +1,7 @@
+{
+  "name": "github-oidc",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "subject": "repo:mohammad1774/terraform_gha_learn:ref:refs/heads/master",
+  "description": "OIDC for GitHub Actions on master",
+  "audiences": ["api://AzureADTokenExchange"]
+}
