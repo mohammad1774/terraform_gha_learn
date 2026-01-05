@@ -50,4 +50,4 @@ jobs:
 
             - name: Terraform Destroy
               if: inputs.action == 'destroy'
-              run: terraform -chdir=${{ inputs.tf_dir }} apply -auto-approve
+              run: terraform -chdir=${{ inputs.tf_dir }} destroy -auto-approve
