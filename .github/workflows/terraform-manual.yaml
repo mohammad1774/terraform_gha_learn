@@ -6,7 +6,7 @@ on:
             tf_dir:
                 description: "Terraform directory"
                 required: true
-                default: "infra/evs/dev"
+                default: "infra/envs/dev"
             action:
                 description: "plan or apply"
                 required: true 
