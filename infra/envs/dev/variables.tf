@@ -19,3 +19,10 @@ variable "blob_container_name" {
   description = "Blob Container name."
   default     = "appdata"
 }
+
+variable "tfstate_container_name" {
+  type        = string
+  description = "Blob container for Terraform remote state"
+  default     = "tfstate"
+
+}

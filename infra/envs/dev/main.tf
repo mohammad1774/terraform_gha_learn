@@ -18,3 +18,10 @@ resource "azurerm_storage_container" "appdata" {
   storage_account_name  = azurerm_storage_account.sa.name
   container_access_type = "private"
 }
+
+resource "azurerm_storage_container" "tfstate" {
+  name                  = var.tfstate_container_name
+  storage_account_name  = azurerm_storage_account.sa.name
+  container_access_type = "private"
+}
+
