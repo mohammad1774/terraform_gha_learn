@@ -57,7 +57,7 @@ resource "kubernetes_persistent_volume_claim" "app_pvc" {
 
     resources {
       requests = {
-        storge = "5Gi"
+        storage = "5Gi"
       }
     }
   }
