@@ -26,3 +26,25 @@ variable "tfstate_container_name" {
   default     = "tfstate"
 
 }
+
+variable "aks_name" {
+  type = string 
+  description = "AKS Cluster name"
+}
+
+variable "dns_prefix" {
+  type = string 
+  description = "DNS Prefix for AKS"
+}
+
+variable "node_vm_size" {
+  type = string 
+  description = "AKIS node VM size"
+  default = "Standard_DS2_V2"
+}
+
+variable "node_count" {
+  type = number 
+  description = "Number of nodes"
+  default = 2
+}

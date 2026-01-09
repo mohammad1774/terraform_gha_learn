@@ -13,3 +13,12 @@ output "storage_account_name" {
 output "blob_container_name" {
   value = azurerm_storage_container.appdata.name
 }
+
+output "aks_cluster_name" {
+  value = azurerm_kubernetes_cluster.aks.name 
+}
+
+output "aks_config"{
+  value = azurerm_kubernetes_cluster.aks.kube_config_raw
+  sensitive = true
+}
