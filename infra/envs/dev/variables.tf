@@ -40,7 +40,7 @@ variable "dns_prefix" {
 variable "node_vm_size" {
   type = string 
   description = "AKIS node VM size"
-  default = "Standard_DS2_V2"
+  default = "Standard_B2s"
 }
 
 variable "node_count" {
