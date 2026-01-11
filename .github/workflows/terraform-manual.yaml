@@ -46,7 +46,7 @@ jobs:
 
             - name: Terraform Apply
               if: inputs.action == 'apply'
-              run: terraform -chdir=${{ inputs.tf_dir }} apply -auto-approve
+              run: terraform -chdir=${{ inputs.tf_dir }} apply -auto-approve -parallelism=1
 
             - name: Terraform Destroy
               if: inputs.action == 'destroy'
