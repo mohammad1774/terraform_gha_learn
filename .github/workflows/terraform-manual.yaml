@@ -40,7 +40,8 @@ jobs:
             - name: Terraform validate
               run: terraform -chdir=${{ inputs.tf_dir }} validate
 
-            - name: Terraform plan
+            - name: Terraform plan 
+              if: inputs.action == 'apply' || inputs.action == 'destroy' 
               run: terraform -chdir=${{ inputs.tf_dir }} plan -no-color
 
             - name: Terraform Apply

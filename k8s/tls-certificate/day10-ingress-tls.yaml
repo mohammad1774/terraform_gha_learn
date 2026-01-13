@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1 
+kind: Ingress 
+metadata: 
+  name: web-ingress 
+  namespace: app 
+  annotations: 
+    cert-manager.io/cluster-issuer: letsencrypt-staging 
+    external-dns.alpha.kubernetes.io/hostname: mohammadahmed1774.work
+
+spec:
+  ingressClassName: nginx 
+  tls:
+    - hosts:
+      - mohammadahmed1774.work 
+      secretName: web-tls 
+  rules:
+    - host: mohammadahmed1774.work 
+      http: 
+        paths:
+          - path: /
+            pathType: Prefix 
+            backend: 
+              service:
+                name: web 
+                port: 
+                  number: 80
