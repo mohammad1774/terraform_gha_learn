@@ -1,0 +1,6 @@
+{
+    "tenantId": "06a63fa9-958b-4b7e-a6f9-e62aaf410c51",
+    "subscriptionId": "1ecdbb3f-d6be-4010-8107-6b0b112021a2",
+    "resourceGroup" : "dns-zones",
+    "useManagedIdentityExtension" : true
+}

@@ -40,30 +40,3 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
 }
-
-resource "kubernetes_namespace_v1" "app" {
-  metadata {
-    name = "app"
-  }
-}
-
-resource "kubernetes_persistent_volume_claim_v1" "app_pvc" {
-  metadata {
-    name = "app-pvc"
-    namespace = kubernetes_namespace_v1.app.metadata[0].name 
-  }
-  spec {
-    access_modes = ["ReadWriteOnce"]
-
-    resources {
-      requests = {
-        storage = "5Gi"
-      }
-    }
-  }
-  wait_until_bound = true 
-
-  timeouts {
-    create = "20m"
-  }
-}
