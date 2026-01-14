@@ -22,7 +22,3 @@ output "aks_config"{
   value = azurerm_kubernetes_cluster.aks.kube_config_raw
   sensitive = true
 }
-
-output "pvc_name" {
-  value = kubernetes_persistent_volume_claim_v1.app_pvc.metadata[0].name 
-}
