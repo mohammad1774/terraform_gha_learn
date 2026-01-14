@@ -38,6 +38,7 @@ jobs:
               run: terraform -chdir=${{ inputs.tf_dir }} init -input=false
             
             - name: Terraform validate
+              if: inputs.action == 'apply' || inputs.action == 'plan' 
               run: terraform -chdir=${{ inputs.tf_dir }} validate
 
             - name: Terraform plan 
